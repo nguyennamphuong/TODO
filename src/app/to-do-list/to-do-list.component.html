@@ -1,0 +1,21 @@
+<button (click)="AddFnc()">Thêm mới</button>
+<table>
+  <thead>
+    <tr style="background-color: cadetblue;">
+      <th>Thao tác</th>
+      <th>Mã công việc</th>
+      <th>Tên công việc</th>
+      <th>Nội dung công việc</th>
+      <th>Trạng thái công việc</th>      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of TodoLst">
+      <td><button (click)="ModFnc(data)">sửa</button> <button (click)="DelFnc(data)">xóa</button></td>
+      <td>{{data.Id}}</td>
+      <td>{{data.Name}}</td>
+      <td>{{data.Content}}</td>
+      <td>{{data.IsComplete ? "hoàn thành" : "chưa hoàn thành"}}</td>
+    </tr>
+  </tbody>
+</table>

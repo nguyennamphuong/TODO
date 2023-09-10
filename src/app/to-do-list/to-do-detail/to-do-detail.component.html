@@ -1,0 +1,50 @@
+<table>
+    <tr>
+        <td>
+            <button (click)="UpdateFnc()">Cập nhật</button> <button (click)="BackFnc()">Trở về</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <fieldset style="width: 600px;">
+                <legend>
+                    Dữ liệu cập nhật
+                </legend>
+                <table>
+                    <tr *ngIf="this.dataUpdate">
+                        <td>
+                            Mã công việc
+                        </td>
+                        <td>
+                            <input type="text" disabled [(ngModel)]="Data.Id">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Tên công việc
+                        </td>
+                        <td>
+                            <input type="text" [(ngModel)]="Data.Name" maxlength="100" style="width: 300px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            nội dung công việc
+                        </td>
+                        <td>
+                            <textarea [(ngModel)]="Data.Content" maxlength="300" style="width: 300px;"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            trạng thái
+                        </td>
+                        <td>
+                            <input type="checkbox" [(ngModel)]="Data.IsComplete">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </td>
+    </tr>
+</table>
